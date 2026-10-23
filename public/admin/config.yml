@@ -1,0 +1,43 @@
+# Configuración de Decap CMS — ESTE es el único archivo que define qué puede
+# editar el cliente. No hay base de datos: todo se guarda como commits en el
+# repositorio de GitHub del proyecto.
+
+backend:
+  name: github
+  repo: usuario/nombre-del-repo   # TODO: reemplazar por "org-o-usuario/repo" real
+  branch: main
+  # base_url apunta al servidor OAuth (ver SETUP.md) — NO a este mismo sitio.
+  base_url: https://REEMPLAZAR-CON-TU-OAUTH-PROXY.vercel.app
+  auth_endpoint: auth
+
+# Dónde se guardan las fotos que sube el cliente, y desde qué ruta las sirve
+# Next.js en el sitio público.
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "inicio"
+    label: "Página de inicio"
+    files:
+      - label: "Textos de inicio"
+        name: "home"
+        file: "content/home.json"
+        fields:
+          - { label: "Título", name: "titulo", widget: "string" }
+          - { label: "Subtítulo", name: "subtitulo", widget: "string" }
+          - { label: "Texto principal", name: "cuerpo", widget: "text" }
+
+  - name: "fotos"
+    label: "Fotos"
+    files:
+      - label: "Galería de fotos"
+        name: "fotos"
+        file: "content/fotos.json"
+        fields:
+          - label: "Fotos"
+            name: "fotos"
+            widget: "list"
+            fields:
+              - { label: "Imagen", name: "imagen", widget: "image" }
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Descripción", name: "descripcion", widget: "text", required: false }

@@ -1,0 +1,14 @@
+{
+  "fotos": [
+    {
+      "imagen": "/images/ejemplo-1.jpg",
+      "titulo": "Nombre de la foto 1",
+      "descripcion": "Descripción corta, editable por el cliente."
+    },
+    {
+      "imagen": "/images/ejemplo-2.jpg",
+      "titulo": "Nombre de la foto 2",
+      "descripcion": "Descripción corta, editable por el cliente."
+    }
+  ]
+}

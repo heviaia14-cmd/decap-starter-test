@@ -1,0 +1,16 @@
+{
+  "name": "heviawerk-decap-starter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Plantilla base: Next.js + Vercel + Decap CMS (git-based, gratis para siempre) para que un cliente de HeviaWerk edite sus propias fotos y textos sin tocar código.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "14.2.15",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}
