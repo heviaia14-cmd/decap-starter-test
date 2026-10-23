@@ -1,0 +1,4 @@
+# Higiene, no seguridad real: /admin de todas formas requiere login
+# (Netlify Identity + Git Gateway). Esto solo evita que buscadores lo indexen.
+User-agent: *
+Disallow: /admin
