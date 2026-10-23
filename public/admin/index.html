@@ -6,6 +6,11 @@
     <title>Panel de edición</title>
   </head>
   <body>
+    <!-- Netlify Identity debe cargar ANTES que Decap CMS: así es el widget el
+         que procesa el #invite_token / #recovery_token / #confirmation_token
+         de la URL, antes de que el router interno de Decap lo reescriba y lo
+         deje inservible (bug conocido de la integración git-gateway). -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <!-- Decap CMS: se carga desde su CDN oficial, no hace falta instalar nada -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </body>
