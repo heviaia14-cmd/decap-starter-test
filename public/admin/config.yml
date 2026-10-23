@@ -3,12 +3,11 @@
 # repositorio de GitHub del proyecto.
 
 backend:
-  name: github
-  repo: usuario/nombre-del-repo   # TODO: reemplazar por "org-o-usuario/repo" real
+  name: git-gateway
   branch: main
-  # base_url apunta al servidor OAuth (ver SETUP.md) — NO a este mismo sitio.
-  base_url: https://REEMPLAZAR-CON-TU-OAUTH-PROXY.vercel.app
-  auth_endpoint: auth
+  # git-gateway usa Netlify Identity + Git Gateway para la autenticación.
+  # No necesita repo ni base_url: Netlify ya sabe a qué repo está conectado
+  # (ver Site configuration > Git Gateway en el panel de Netlify).
 
 # Dónde se guardan las fotos que sube el cliente, y desde qué ruta las sirve
 # Next.js en el sitio público.
